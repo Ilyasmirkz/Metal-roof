@@ -46,10 +46,10 @@
 
 <section id="contact">
   <h2>Оставить заявку</h2>
-  <form>
-    <input type="text" placeholder="Ваше имя" required />
-    <input type="tel" placeholder="Телефон для связи" required />
-    <textarea placeholder="Комментарий или метраж (необязательно)"></textarea>
+  <form action="https://api.whatsapp.com/send?phone=77770196433&text=Заявка%20с%20сайта%0A%0AИмя:%20" method="GET" target="_blank">
+    <input type="text" placeholder="Ваше имя" name="name" required />
+    <input type="tel" placeholder="Телефон для связи" name="phone" required />
+    <textarea placeholder="Комментарий или метраж (необязательно)" name="message"></textarea>
     <button class="button" type="submit">Отправить</button>
   </form>
 </section>
