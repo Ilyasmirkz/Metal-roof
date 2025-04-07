@@ -46,12 +46,27 @@
 
 <section id="contact">
   <h2>Оставить заявку</h2>
-  <form action="https://api.whatsapp.com/send?phone=77770196433&text=Заявка%20с%20сайта%0A%0AИмя:%20" method="GET" target="_blank">
-    <input type="text" placeholder="Ваше имя" name="name" required />
-    <input type="tel" placeholder="Телефон для связи" name="phone" required />
-    <textarea placeholder="Комментарий или метраж (необязательно)" name="message"></textarea>
+  <form id="whatsapp-form">
+    <input type="text" id="name" placeholder="Ваше имя" required />
+    <input type="tel" id="phone" placeholder="Телефон для связи" required />
+    <textarea id="message" placeholder="Комментарий или метраж (необязательно)"></textarea>
     <button class="button" type="submit">Отправить</button>
   </form>
+</section>
+
+<script>
+  // Отправка данных на WhatsApp
+  document.getElementById("whatsapp-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Получаем данные из формы
+    const name = encodeURIComponent(document.getElementById("name").value);
+    const phone = encodeURIComponent(document.getElementById("phone").value);
+    const message = encodeURIComponent(document.getElementById("message").value);
+
+    // Создаем ссылку для WhatsApp
+    const whatsappURL = `https://wa.me/77770196433?text=Заявка%20с%20сайта%0A%0
+
 </section>
 <!-- Кнопка для WhatsApp -->
 <a href="https://wa.me/77770196433?text=Здравствуйте,%20я%20хочу%20оставить%20заявку" target="_blank">
